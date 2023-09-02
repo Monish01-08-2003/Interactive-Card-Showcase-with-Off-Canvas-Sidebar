@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover-cards</title>
+  </head>
+  <body>
+    <img
+            src="https://cdn-icons-png.flaticon.com/512/11480/11480420.png"
+            alt="more"
+            style='height: 50px;'
+            class="btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#demo1"
+          />
+        </div>
+        <!-- offcanvas sidebar -->
+        <div class="offcanvas offcanvas-start" id="demo1">
+          <div class="offcanvas-header">
+            <div class="offcanvas-title">
+              <p>Done With 💕 By,</p>
+              <h1>Monish R</h1>
+            </div>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <h3>Projects</h3>
+
+            <label for="gitLink">Explore My GitHub Profile</label>
+            <a href="https://github.com/Monish01-08-2003" id="gitLink" class="p"
+              >GitHub</a
+            >
+            <label for="linkedin">Explore My LinkedIn Profile</label>
+            <a
+              href="www.linkedin.com/in/monish-r-b11325275"
+              id="gitLink"
+              class="p"
+              >LinkedIn</a
+            >
+            <br />
+          
+         
+          </div>
+        </div>
+      </div>
+    <div class="container1">
+      <div class="card1">
+        <img
+        src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80""
+        alt="" class="cardimg">
+        <div class="cardcontent">
+          <h3 class="contenttop">Felines</h3>
+          <p>
+            Cats are one of the most popular and beloved pets around the world.
+            They are known for their independent and sometimes mysterious nature
+          </p>
+          <h3 class="contentbottom">Felines</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./cats.js"></script>
+</html>
+<style>
+  * {
+    font-family: "Noto Serif", serif;
+    color: #3b3b3b;
+  }
+  p {
+    font-family: "Noto Serif", serif;
+  }
+  .container1 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  h3 {
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .card1{
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(181, 250, 124);
+    height: 250px;
+    width: 250px;
+    z-index: 0;
+    transition-duration: 0.5s;
+    overflow: hidden;
+  }
+  .cardimg {
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    height: 200px;
+  }
+  .cardcontent {
+    z-index: 1;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    transition-duration: 1s;
+    height: 150px;
+    width: 250px;
+    bottom: 400px;
+
+    z-index: 0;
+    top: 150px;
+    position: absolute;
+  }
+  .contenttop {
+    padding-top: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    opacity: 0;
+    transition: height 0.5s ease;
+  }
+  .cardcontent > p {
+    opacity: 0;
+    transition-duration: 0.3s;
+  }
+  .contentbottom {
+    margin-top: -65px;
+    transition-duration: 0.3s;
+  }
+  .card1:hover {
+    cursor: pointer;
+    padding: 10px 0px;
+  }
+  .card1:hover .cardcontent {
+    top: 225px;
+    height: 165px;
+  }
+  .card1:hover p {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .card1:hover .contenttop {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  .card1:hover .contentbottom {
+    opacity: 0;
+    visibility: hidden;
+  }
+</style>
