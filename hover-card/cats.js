@@ -9,13 +9,34 @@ try {
     })
     .then((data) => {
       console.log(data);
-      var container = document.getElementById("card1");
-      data.map((values) => {
+
+      data.forEach((values) => {
+        //container creating
+        const container = document.createElement("div");
+        container.classList.add("container1");
+
+        //card creating
+        const card = document.createElement("div");
+        card.classList.add("card1");
+        container.appendChild(card);
+      
+        
+
         //images
         const images = document.createElement("img");
         images.src = values.url;
         images.classList.add("cardimg");
-        container.appendChild(images);
+        card.appendChild(images);
+          //cardcontent
+        const cardcontent = document.createElement("div");
+        cardcontent.classList.add("cardcontent");
+        card.appendChild(cardcontent);
+        //h tag
+        const headingtop = document.createElement("h3");
+        headingtop.classList.add("contenttop");
+        headingtop.textContent = "Felines";
+        cardcontent.appendChild(headingtop);
+        document.body.appendChild(container);
       });
     });
 } catch (err) {

@@ -27,49 +27,44 @@
   </head>
   <body>
     <img
-            src="https://cdn-icons-png.flaticon.com/512/11480/11480420.png"
-            alt="more"
-            style='height: 50px;'
-            class="btn"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#demo1"
-          />
-        </div>
-        <!-- offcanvas sidebar -->
-        <div class="offcanvas offcanvas-start" id="demo1">
-          <div class="offcanvas-header">
-            <div class="offcanvas-title">
-              <p>Done With 💕 By,</p>
-              <h1>Monish R</h1>
-            </div>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <h3>Projects</h3>
+      src="https://cdn-icons-png.flaticon.com/512/11480/11480420.png"
+      alt="more"
+      style="height: 50px"
+      class="btn"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#demo1"
+    />
 
-            <label for="gitLink">Explore My GitHub Profile</label>
-            <a href="https://github.com/Monish01-08-2003" id="gitLink" class="p"
-              >GitHub</a
-            >
-            <label for="linkedin">Explore My LinkedIn Profile</label>
-            <a
-              href="www.linkedin.com/in/monish-r-b11325275"
-              id="gitLink"
-              class="p"
-              >LinkedIn</a
-            >
-            <br />
-          
-         
-          </div>
+    <!-- offcanvas sidebar -->
+    <div class="offcanvas offcanvas-start" id="demo1">
+      <div class="offcanvas-header">
+        <div class="offcanvas-title">
+          <p>Done With 💕 By,</p>
+          <h1>Monish R</h1>
         </div>
+        <button
+          type="button"
+          class="btn-close text-reset"
+          data-bs-dismiss="offcanvas"
+        ></button>
       </div>
-    <div class="container1">
+      <div class="offcanvas-body">
+        <h3>Projects</h3>
+
+        <label for="gitLink">Explore My GitHub Profile</label>
+        <a href="https://github.com/Monish01-08-2003" id="gitLink" class="p"
+          >GitHub</a
+        >
+        <label for="linkedin">Explore My LinkedIn Profile</label>
+        <a href="www.linkedin.com/in/monish-r-b11325275" id="gitLink" class="p"
+          >LinkedIn</a
+        >
+        <br />
+      </div>
+    </div>
+
+    <div class="container1" id="container1">
       <div class="card1">
         <img
         src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80""
@@ -85,7 +80,6 @@
       </div>
     </div>
   </body>
-  <script src="./cats.js"></script>
 </html>
 <style>
   * {
@@ -102,21 +96,23 @@
   }
   h3 {
     text-transform: uppercase;
-    margin-top: 0px;
-    margin-bottom: 0px;
   }
-  .card1{
+  .card1 {
+    box-shadow: 10px 10px 10px gray;
     text-align: center;
     justify-content: center;
     border-radius: 10px;
-    background-color: rgb(181, 250, 124);
+    background-color: rgb(200, 124, 250);
     height: 250px;
     width: 250px;
     z-index: 0;
     transition-duration: 0.5s;
-    overflow: hidden;
+    overflow-wrap: hidden;
   }
   .cardimg {
+    transition-duration: 0.5s;
+    bottom: 0px;
+
     position: relative;
     z-index: 2;
     border-radius: 10px;
@@ -130,35 +126,44 @@
     height: 150px;
     width: 250px;
     bottom: 400px;
-
     z-index: 0;
     top: 150px;
     position: absolute;
   }
   .contenttop {
-    padding-top: 5px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin: 0px;
+
     opacity: 0;
     transition: height 0.5s ease;
   }
   .cardcontent > p {
     opacity: 0;
+
+    padding: 0px 10px;
     transition-duration: 0.3s;
   }
   .contentbottom {
-    margin-top: -65px;
+    margin-top: -95px;
     transition-duration: 0.3s;
   }
   .card1:hover {
     cursor: pointer;
-    padding: 10px 0px;
+    padding-bottom: 10px;
+  }
+  .card1:hover .cardimg {
+    bottom: 30px;
+    border-radius: 10px;
+  }
+  .cardimg:hover .card1 {
+    cursor: pointer;
+    padding-bottom: 10px;
   }
   .card1:hover .cardcontent {
-    top: 225px;
-    height: 165px;
+    top: 221px;
+    height: 180px;
   }
   .card1:hover p {
+    text-align: justify;
     opacity: 1;
     transition: opacity 0.3s ease;
   }
